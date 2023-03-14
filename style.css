@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+}
+
+.main-container {
+    background-color: #ffff;
+    width: 550px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    border-radius: 10px;
+}
+
+.box1 img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.box2 {
+    padding: 20px;
+}
+
+.heading {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 1.2rem;
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+.para {
+    font-size: 12px;
+    color: hsl(214, 17%, 51%);
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1rem;
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+.credit {
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px
+}
+
+.person {
+    display: grid;
+    grid-template-columns: 60px 200px;
+}
+
+.person img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+#share {
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    /* color: #ffff; */
+    padding: 7px;
+    border: none;
+    border-radius: 50%;
+    background-color: hsl(210, 46%, 95%);
+    cursor: pointer;
+}
+
+#tooltip {
+    display: flex;
+    position: relative;
+}
+
+#contant {
+    display: flex;
+    background-color: #6d7f97;
+    position: absolute;
+    left: 50%;
+    top: -100%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 10px 15px;
+    border-radius: 7px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+
+#contant::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    height: 15px;
+    width: 15px;
+    background-color: #6d7f97;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.visible {
+    visibility: hidden;
+}
+
+#contant img {
+    padding-left: 10px;
+    width: 27px;
+    height: 25px;
+}
+
+#contant p {
+    letter-spacing: 2px;
+    color: hsl(217, 19%, 35%);
+}
+#share-button{
+    display: none;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 550px) {
+    .main-container {
+        max-width: 95%;
+        margin: auto;
+        width: 300px;
+        height: 480px;
+        grid-template-rows: 200px 1fr;
+        grid-auto-flow: column;
+    }
+
+    .box1 {
+        width: 300px;
+    }
+
+    .box1 img {
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+
+    }
+
+    .box2 {
+        width: 300px;
+    }
+
+    .heading {
+        margin-bottom: 10px;
+    }
+
+    .para {
+        font-size: 13px;
+    }
+    .credit {
+        margin-top:15px;
+        margin-left: 5px;
+        justify-content: center;
+    }
+    #contant {
+        width: 300px;
+        display: flex;
+        align-self: center;
+        background-color: #6d7f97;
+        position: absolute;
+        left: -115px;
+        top: 0;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        padding: 15px 20px;
+        border-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        opacity: 1;
+        transition: opacity 0.5s ease;
+    }
+    #contant::before{
+        display: none;
+    }
+    #share-button {
+        display: block;
+        align-self: center;
+        width: 30px;
+        height: 30px;
+        margin-left: 90px;
+        border: none;
+        border-radius: 50%;
+        background-color: hsl(210, 46%, 95%);
+        cursor: pointer;
+    }
+    .visible {
+        visibility: hidden;
+    }
+
+    .social-media {
+        width: 25px;
+        height: 25px;
+    }
+    #contant img{
+        padding-left: 10px;  
+    }
+}
